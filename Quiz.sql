@@ -1,0 +1,32 @@
+CREATE DATABASE perguntas;
+
+USE perguntas;
+
+CREATE TABLE perguntas (
+  id INT NOT NULL AUTO_INCREMENT,
+  pergunta VARCHAR(255) NOT NULL,
+  resposta VARCHAR(255) NOT NULL,
+  tipo VARCHAR(255) NOT NULL,
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE gestas (
+  id INT NOT NULL AUTO_INCREMENT,
+  pergunta_id INT NOT NULL,
+  gestas INT NOT NULL,
+  PRIMARY KEY (id),
+);
+
+CREATE TABLE mul (
+  id INT NOT NULL AUTO_INCREMENT,
+  pergunta_id INT NOT NULL,
+  mul INT NOT NULL,
+  PRIMARY KEY (id),
+);
+
+CREATE TABLE mil (
+  id INT NOT NULL AUTO_INCREMENT,
+  pergunta_id INT NOT NULL,
+  mil INT NOT NULL,
+  PRIMARY KEY (id),
+);
